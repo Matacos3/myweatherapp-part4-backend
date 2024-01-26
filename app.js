@@ -12,7 +12,9 @@ var userRouter = require('./routes/users');
 var app = express();
 
 const cors = require('cors');
-app.use(cors());
+app.use(cors({
+  origin: 'https://myweatherapp-part4-frontend.vercel.app'
+}));
 
 app.use(logger('dev'));
 app.use(express.json());
